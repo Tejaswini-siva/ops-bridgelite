@@ -1,0 +1,32 @@
+{
+  "name": "opsbridge-lite",
+  "version": "1.0.0",
+  "description": "OpsBridge Lite - Inventory & Operations Management System",
+  "main": "server/server.js",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "inventory",
+    "operations",
+    "management",
+    "express",
+    "react",
+    "sqlite"
+  ],
+  "author": "Internship Project",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "sql.js": "^1.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
